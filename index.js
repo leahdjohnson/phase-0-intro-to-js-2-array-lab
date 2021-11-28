@@ -2,11 +2,11 @@
 let cats = ["Milo", "Otis", "Garfield"];
 
 function destructivelyAppendCat(name){
-cats.push("Ralph")
+cats.push(name)
 }
 
 function destructivelyPrependCat(name) {
-cats.unshift("Milo")
+cats.unshift(name)
 }
 
 function destructivelyRemoveLastCat() {
@@ -17,22 +17,27 @@ function destructivelyRemoveFirstCat(){
 cats.shift()
 }
 
-let copyOfcats() = [...cats];
+//let copyOfcats = [...cats];
 
 function appendCat(string){
-    copyOfcats.push("Sylvester");
+    let copyOfCats = [...cats, string];
+    return (copyOfCats);
 }
 
 function prependCat(name){
-    console.log(cats.slice(0));
+let copyOfCats = [name, ...cats];
+return (copyOfCats);
 }
 
 function removeLastCat(){
-    
+let copyOfCats = [...cats];
+let length = copyOfCats.length;
+return (copyOfCats.slice(0,length -1));
 }
 
 function removeFirstCat(){
-    
+let copyOfCats = [...cats];
+return copyOfCats.slice(1)
 }
 
 beforeEach(function () {
