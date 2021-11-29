@@ -39,9 +39,3 @@ function removeFirstCat(){
 let copyOfCats = [...cats];
 return copyOfCats.slice(1)
 }
-
-beforeEach(function () {
-    cats.length = 0;
-  
-    cats.push("Milo", "Otis", "Garfield");
-  });
